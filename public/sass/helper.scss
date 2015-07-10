@@ -1,0 +1,12 @@
+/* help function */
+
+$fs-12: .75rem;
+$fs-14: .875rem;
+$fs-16: 1rem;
+@function toRem($value) {
+@return ($value/16);
+}
+@mixin defaultFont() {
+    font-size: $fs-14;
+    color: #333;
+}
