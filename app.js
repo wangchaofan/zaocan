@@ -29,6 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //session
 app.use(session({
+    resave: false,
+    saveUninitialized: false,
     secret: settings.cookieSecret,
     store: new MongoStore({
         db: settings.db

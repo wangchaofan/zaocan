@@ -5,18 +5,19 @@ block content
     div.banner
         .swiper-container()
             ul.swiper-wrapper
-                li.swiper-slide
-                    a(href=""): img(src="/img/5zhe.png", alt="")
+                each item in advs
+                    li.swiper-slide
+                        a(href=item.link_url): img(src=item.img_url, alt=item.name)
         div.pagination
     #position.container
         #location.h2
-            .current-city(data-currentcity="北京", data-city-id="1" data-is-need-alert="false")
-                | <i class="icon icon-location"></i> 当前城市: 北京
+            .current-city(data-currentcity="北京市", data-city-id="1" data-is-need-alert="false")
+                | <i class="icon icon-location"></i> 当前城市: 北京市
             .city-select
                 span.btn.btn-city-select 切换城市 <i class="icon icon-arrow-down"></i>
                 ul.city-list.clearfix
                     li.city-list-item
-                        a(href="" data-cityid='1')
+                        a(href="" data-cityid='1') 北京市
         .mt-searchbox
             .mt-searchbox-wrap
                 .search-icon: img(src="/img/icon-search.png" alt="")
