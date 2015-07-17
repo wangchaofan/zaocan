@@ -9,9 +9,9 @@ var Schema = mongoose.Schema,
     ObjectId = Schema.Object;
 
 var advertisementSchema = new Schema({
-    name: { type: String },
-    img_url: { type: String },
-    link_url: { type: String }
+    name: String,
+    img_url: String,
+    link_url: String
 });
 
 module.exports = mongoose.model('Advertisement', advertisementSchema);
